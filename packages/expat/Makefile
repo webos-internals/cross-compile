@@ -1,8 +1,9 @@
 NAME = expat
 VERSION = 1.95.8
 DEPENDS = 
+PALM_VERSION = 1.4.0
 
-SRC_TGZ = http://palm.cdnetworks.net/opensource/1.4.0/expat-1.95.8.tar.gz
+SRC_TGZ = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/expat-1.95.8.tar.gz
 
 include ../../support/download.mk
 

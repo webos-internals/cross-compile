@@ -1,9 +1,11 @@
 NAME = jpeg
 VERSION = 6b
 DEPENDS = 
+PALM_VERSION = 1.4.0
 
 
-SRC_TGZ = http://palm.cdnetworks.net/opensource/1.4.0/${NAME}src.v${VERSION}.tar.gz
+SRC_TGZ = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/${NAME}src.v${VERSION}.tar.gz
+PATCH = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/${NAME}src.v${VERSION}-patches.tgz
 
 include ../../support/download.mk
 
@@ -15,7 +17,7 @@ build/.unpacked: ${DL_DIR}/${NAME}-${VERSION}.tar.gz
 	mkdir -p build
 	tar -C build -x -f $<
 	mv build/${NAME}-${VERSION} build/src
-	${MAKE} SRC_FILE=http://palm.cdnetworks.net/opensource/1.4.0/${NAME}src.v${VERSION}-patches.tgz \
+	${MAKE} SRC_FILE=${PATCH} \
 		LOCAL_FILE=${NAME}-${VERSION}-patches.tgz download
 	tar -x -f ${DL_DIR}/${NAME}-${VERSION}-patches.tgz -O \
 		patches/debian.patch patches/ldflags.patch patches/paths.patch | patch -d build/src -p1

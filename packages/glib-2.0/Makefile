@@ -1,9 +1,10 @@
 NAME = glib-2.0
 VERSION = 2.16.6
 DEPENDS = 
+PALM_VERSION = 1.4.0
 
-SRC_BZ2 = http://palm.cdnetworks.net/opensource/1.4.0/glib-${VERSION}.tar.bz2
-PATCH = http://palm.cdnetworks.net/opensource/1.4.0/glib-${VERSION}-patches.tgz
+SRC_BZ2 = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/glib-${VERSION}.tar.bz2
+PATCH = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/glib-${VERSION}-patches.tgz
 
 .PHONY: unpack
 unpack: build/.unpacked

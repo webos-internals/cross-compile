@@ -1,8 +1,10 @@
 NAME = libsdl-mixer
 VERSION = 1.2
 DEPENDS = libsdl libavformat libavutil libavcodec amrnb amrwb
+PALM_VERSION = 1.4.0
 
-SRC_TGZ = http://palm.cdnetworks.net/opensource/1.4.0/${NAME}-${VERSION}.tgz
+SRC_TGZ = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/${NAME}-${VERSION}.tgz
+PATCH = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/${NAME}-${VERSION}-patch.gz
 
 include ../../support/download.mk
 
@@ -14,7 +16,7 @@ build/.unpacked: ${DL_DIR}/${NAME}-${VERSION}.tar.gz
 	mkdir -p build
 	tar -C build -x -f $<
 	mv build/${NAME}-${VERSION} build/src
-	${MAKE} SRC_FILE=http://palm.cdnetworks.net/opensource/1.4.0/${NAME}-${VERSION}-patch.gz \
+	${MAKE} SRC_FILE=${PATCH} \
 		LOCAL_FILE=${NAME}-${VERSION}-patch.gz download
 	zcat ${DL_DIR}/${NAME}-${VERSION}-patch.gz | patch -d build/src -p0
 	touch $@

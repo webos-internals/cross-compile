@@ -1,7 +1,9 @@
 NAME = zlib
 VERSION = 1.2.3
+PALM_VERSION = 1.4.0
 
-SRC_BZ2 = http://palm.cdnetworks.net/opensource/1.4.0/${NAME}-${VERSION}.tar.bz2
+SRC_BZ2 = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/${NAME}-${VERSION}.tar.bz2
+PATCH = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/${NAME}-${VERSION}-patches.tgz
 
 include ../../support/download.mk
 
@@ -13,7 +15,7 @@ build/.unpacked: ${DL_DIR}/${NAME}-${VERSION}.tar.bz2
 	mkdir -p build
 	tar -C build -j -x -f $<
 	mv build/${NAME}-${VERSION} build/src
-	${MAKE} SRC_FILE=http://palm.cdnetworks.net/opensource/1.4.0/${NAME}-${VERSION}-patches.tgz \
+	${MAKE} SRC_FILE=${PATCH} \
 		LOCAL_FILE=${NAME}-${VERSION}-patches.tgz download
 	tar -x -f ${DL_DIR}/${NAME}-${VERSION}-patches.tgz -O \
 		zlib-patches/visibility.patch zlib-patches/autotools.patch | patch -d build/src -p1

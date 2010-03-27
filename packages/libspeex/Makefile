@@ -1,8 +1,9 @@
 NAME = libspeex
 VERSION = 1.2rc1
 DEPENDS = 
+PALM_VERSION = 1.4.0
 
-SRC_TGZ = http://palm.cdnetworks.net/opensource/1.4.0/speex-1.2rc1.tar.gz
+SRC_TGZ = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/speex-1.2rc1.tar.gz
 
 include ../../support/download.mk
 

@@ -1,8 +1,9 @@
 NAME = liboil
 VERSION = 0.3.14
 DEPENDS = 
+PALM_VERSION = 1.4.0
 
-SRC_TGZ = http://palm.cdnetworks.net/opensource/1.4.0/${NAME}-${VERSION}.tar.gz
+SRC_TGZ = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/${NAME}-${VERSION}.tar.gz
 
 include ../../support/download.mk
 

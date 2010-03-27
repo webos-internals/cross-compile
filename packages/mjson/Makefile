@@ -1,8 +1,9 @@
 NAME = mjson
 VERSION = 1.0
+PALM_VERSION = 1.4.0
 
-SRC_TGZ = http://palm.cdnetworks.net/opensource/1.4.0/mjson-1.0.tgz
-PATCH = http://palm.cdnetworks.net/opensource/1.4.0/mjson-1.0-patch.gz
+SRC_TGZ = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/mjson-1.0.tgz
+PATCH = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/mjson-1.0-patch.gz
 
 include ../../support/download.mk
 

@@ -1,9 +1,10 @@
 NAME = libpng
 VERSION = 1.2.12
 DEPENDS = zlib
+PALM_VERSION = 1.4.0
 
 
-SRC_BZ2 = http://palm.cdnetworks.net/opensource/1.4.0/${NAME}-${VERSION}.tar.bz2
+SRC_BZ2 = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/${NAME}-${VERSION}.tar.bz2
 
 include ../../support/download.mk
 

@@ -1,8 +1,10 @@
 NAME = readline
 VERSION = 4.3
 DEPENDS = 
+PALM_VERSION = 1.4.0
 
-SRC_TGZ = http://palm.cdnetworks.net/opensource/1.4.0/${NAME}-${VERSION}.tar.gz
+SRC_TGZ = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/${NAME}-${VERSION}.tar.gz
+PATCH = http://palm.cdnetworks.net/opensource/${PALM_VERSION}/${NAME}-${VERSION}-patches.tgz
 
 include ../../support/download.mk
 
@@ -14,7 +16,7 @@ build/.unpacked: ${DL_DIR}/${NAME}-${VERSION}.tar.gz
 	mkdir -p build
 	tar -C build -x -f $<
 	mv build/${NAME}-${VERSION} build/src
-	${MAKE} SRC_FILE=http://palm.cdnetworks.net/opensource/1.4.0/${NAME}-${VERSION}-patches.tgz \
+	${MAKE} SRC_FILE=${PATCH} \
 		LOCAL_FILE=${NAME}-${VERSION}-patches.tgz download
 	zcat ${DL_DIR}/${NAME}-${VERSION}-patches.tgz | patch -d build/src -p1
 	touch $@
