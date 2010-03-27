@@ -1,5 +1,5 @@
-DOCTORPRE  = webosdoctorp100ewwsprint-1.3.5.jar
-DOCTORPIXI = webosdoctorp200ewwsprint-1.3.5.jar
+DOCTORPRE  = webosdoctorp100ewwsprint-1.4.0.jar
+DOCTORPIXI = webosdoctorp200ewwsprint-1.4.0.jar
 SB2ROOT = $(shell dirname `which sb2`)/..
 
 ifeq ($(shell uname -s),Darwin)
@@ -85,7 +85,7 @@ doctors/webosdoctorp100ewwsprint-1.4.0.jar:
 
 doctors/webosdoctorp200ewwsprint-1.4.0.jar:
 	mkdir -p doctors
-	wget -O $@ http://palm.cdnetworks.net/rom/pixi/px14r0d02252010/sr1ntp140rod/webosdoctorp200ewwsprint.jar
+	wget -O $@ http://palm.cdnetworks.net/rom/pixi/px14r0d02252010/sr1ntp140rod/webosdoctorp200ewwsprint.jar 
 
 doctors/palm-sdk_1.3.5-svn234138-sdk117-pho368_i386.deb:
 	mkdir -p doctors

@@ -3,7 +3,7 @@ VERSION = 1.2.12
 DEPENDS = zlib
 
 
-SRC_BZ2 = http://palm.cdnetworks.net/opensource/1.3.5/${NAME}-${VERSION}.tar.bz2
+SRC_BZ2 = http://palm.cdnetworks.net/opensource/1.4.0/${NAME}-${VERSION}.tar.bz2
 
 include ../../support/download.mk
 
