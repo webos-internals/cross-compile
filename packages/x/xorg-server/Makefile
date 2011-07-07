@@ -62,6 +62,19 @@ include ../../../support/cross-compile.mk
 
 build: build/${ARCH}-$(XAPPID).built
 
+#		--enable-xsdl \
+#		--enable-kdrive \
+#		\
+#		--disable-xorg \
+#		--disable-glx \
+#		--disable-xquartz \
+#		--disable-xnest \
+#		--disable-xwin \
+#		--disable-xfake \
+#		--disable-xfbdev \
+#		--disable-xvfb \
+#		--disable-dri \
+
 build/%.built: build/.unpacked
 	rm -f $@
 	( rm -rf build/$* )
@@ -70,17 +83,7 @@ build/%.built: build/.unpacked
 	LDFLAGS=\"-L/usr/local/lib -Wl,-rpath=${XLIBS}:.:/usr/local/lib\" \
 	../src/configure \
 		--prefix=${APP_DIR} \
-		--enable-xsdl \
-		--enable-kdrive \
-		\
-		--disable-xorg \
 		--disable-glx \
-		--disable-xquartz \
-		--disable-xnest \
-		--disable-xwin \
-		--disable-xfake \
-		--disable-xfbdev \
-		--disable-xvfb \
 		--disable-dri \
 	)
 	( ${SB2} gcc -o build/$*/forker forker.c )
