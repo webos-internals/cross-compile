@@ -25,12 +25,13 @@ export NAVIT_LOGFILE=${NAVIT_USER_DATADIR}/navit.log
 
 test -d ${NAVIT_USER_DATADIR} || mkdir -p ${NAVIT_USER_DATADIR}/maps
 
-#delete log if it is more the 300kb
+# Rotate logs (in background)
+for i in 8 7 6 5 4 3 2 1
+do
+	mv ${NAVIT_LOGFILE}.${i}.gz ${NAVIT_LOGFILE}.$((i+1)).gz || true
+done
+mv ${NAVIT_LOGFILE} ${NAVIT_LOGFILE}.1 && gzip --best ${NAVIT_LOGFILE}.1 || true
 touch ${NAVIT_LOGFILE}
-if [ `ls -l ${NAVIT_LOGFILE} | awk '{print $5}'` -gt 300000 ];then
-	rm -f ${NAVIT_LOGFILE}.gz
-	gzip -9 ${NAVIT_LOGFILE}
-fi
 
 #test startup command
 rm -f ${NAVIT_USER_DATADIR}/command1.txt
