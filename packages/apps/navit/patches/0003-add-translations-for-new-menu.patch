@@ -1,7 +1,7 @@
-From 8cff581592668a2db309c609bb151f739097f4e6 Mon Sep 17 00:00:00 2001
+From 2ceacc8008903830e2491d2121f9f095dee04be8 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Malte=20Schr=C3=B6der?= <maltesch@gmx.de>
 Date: Sat, 15 Jan 2011 10:42:03 +0100
-Subject: [PATCH 3/7] add translations for new menu
+Subject: [PATCH 3/9] add translations for new menu
 
 ---
  navit/navit/navit_shipped.xml |    5 +++++
@@ -9,11 +9,11 @@ Subject: [PATCH 3/7] add translations for new menu
  2 files changed, 9 insertions(+), 1 deletion(-)
 
 diff --git a/navit/navit/navit_shipped.xml b/navit/navit/navit_shipped.xml
-index cd90019..8a254cb 100644
+index 9e41340..4950824 100644
 --- a/navit/navit/navit_shipped.xml
 +++ b/navit/navit/navit_shipped.xml
 @@ -91,6 +91,11 @@ Waypoint</text></img>
- 				<img cond='navit.route.route_status&amp;52' src='gui_stop' onclick='navit.route_remove_next_waypoint()'><text>Drop next 
+ 				<img cond='navit.route.route_status&amp;1' src='gui_stop' onclick='navit.route_remove_next_waypoint()'><text>Drop next 
  Waypoint</text></img>
  			</a>
 +<text>Advanced</text>

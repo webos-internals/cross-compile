@@ -19,14 +19,42 @@
 <osd enabled="yes" type="image" x="0" y="-128" w="114" h="102" src="$NAVIT_SHAREDIR/xpm/PreNav/bottom_bg.png" /> 
 <osd enabled="yes" type="image" x="-20" y="-74" w="20" h="20" src="$NAVIT_SHAREDIR/xpm/PreNav/ecke_ur.png" /> 
 <osd enabled="yes" type="image" x="114" y="-74" w="20" h="20" src="$NAVIT_SHAREDIR/xpm/PreNav/ecke_ul.png" />
+<osd enabled="yes" type="image" x="-85" y="20" w="85" h="343" src="$NAVIT_SHAREDIR/xpm/PreNav/menu_right.png" />
 
-<!-- menu right/top-right -->
+<!-- top-right -->
 <osd enabled="yes" type="gps_status" x="-50" y="00" w="50" h="20" background_color="#000000ff"/> 
 <osd enabled="yes" type="text" x="0" y="0" w="1024" h="20" label="Distance: ${navigation.item.destination_length[named]} - Arrival: ${navigation.item.destination_time[arrival]}, ${navigation.item.destination_time[remaining]}" background_color="#000000FF" align="4"/> 
-<osd enabled="yes" type="button" x="-50" y="20" w="50" h="50" command="zoom_out()" src="$NAVIT_SHAREDIR/xpm/PreNav/zoom_out.png"/>
-<osd enabled="yes" type="toggle_announcer" x="-50" y="70" w="50" h="50" icon_src="$NAVIT_SHAREDIR/xpm/PreNav/%s.png" background_color="#00000088"/>
-<osd enabled="yes" type="button" command="zoom_to_route()" x="-50" y="120" w="50" h="50" src="$NAVIT_SHAREDIR/xpm/PreNav/zoom_route.png"/>
-<osd enabled="yes" type="button" x="-50" y="170"  w="50" h="50" command="zoom_in()" src="$NAVIT_SHAREDIR/xpm/PreNav/zoom_in.png"/>
+
+<!-- menu right -->
+<osd enabled="yes" type="button" x="-48" y="20" w="48" h="48" command="zoom_in()" accesskey="w" src="$NAVIT_SHAREDIR/xpm/PreNav/zoom_in_48_48.png"/>
+<osd enabled="yes" type="toggle_announcer" x="-48" y="68" w="48" h="48" accesskey=" " icon_src="$NAVIT_SHAREDIR/xpm/PreNav/%s_48_48.png" background_color="#000000ff"/>
+<osd enabled="yes" type="button" osd_configuration="1" command="osd_configuration=2,
+	set_int_var(&quot;pitch3d&quot;,pitch),pitch=0,
+	set_int_var(&quot;orientation3d&quot;,orientation),orientation=0,
+	set_int_var(&quot;follow3d&quot;,follow_cursor),follow_cursor=0,
+	set_int_var(&quot;autozoom3d&quot;,autozoom_active),autozoom_active=0,
+	set_int_var(&quot;zoom3d&quot;,zoom),zoom=get_int_var(&quot;zoom2d&quot;)?get_int_var(&quot;zoom2d&quot;):12"
+	x="-48" y="116" w="48" h="48" accesskey="." src="$NAVIT_SHAREDIR/xpm/PreNav/button_2d_48_48.png"/>
+<osd enabled="yes" type="button" osd_configuration="2" command="osd_configuration=1,
+	pitch=get_int_var(&quot;pitch3d&quot;),
+	orientation=get_int_var(&quot;orientation3d&quot;),
+	follow_cursor=get_int_var(&quot;follow3d&quot;),
+	set_int_var(&quot;zoom2d&quot;,zoom),zoom=get_int_var(&quot;zoom3d&quot;),
+	autozoom_active=get_int_var(&quot;autozoom3d&quot;)"
+	x="-48" y="116" w="48" h="48" accesskey="." src="$NAVIT_SHAREDIR/xpm/PreNav/button_3d_48_48.png"/>
+
+<osd enabled="yes" type="button" osd_configuration="1" command="osd_configuration=2,
+	set_int_var(&quot;pitch3d&quot;,pitch),pitch=0,
+	set_int_var(&quot;orientation3d&quot;,orientation),orientation=0,
+	set_int_var(&quot;follow3d&quot;,follow_cursor),follow_cursor=0,
+	set_int_var(&quot;autozoom3d&quot;,autozoom_active),autozoom_active=0,
+	set_int_var(&quot;zoom3d&quot;,zoom),
+	zoom_to_route()"
+	x="-48" y="164" w="48" h="48" src="$NAVIT_SHAREDIR/xpm/PreNav/zoom_route_48_48.png"/>
+<osd enabled="yes" type="button" osd_configuration="2" command="zoom_to_route()"
+	x="-48" y="164" w="48" h="48" src="$NAVIT_SHAREDIR/xpm/PreNav/zoom_route_48_48.png"/>
+
+<osd enabled="yes" type="button" x="-48" y="212" w="48" h="48" command="zoom_out()" accesskey="s" src="$NAVIT_SHAREDIR/xpm/PreNav/zoom_out_48_48.png"/>
 
 <!-- bottom-left elements -->
 <osd enabled="yes" type="text" label="${navigation.item.street_name} ${navigation.item.street_name_systematic}" x="110" y="-54" w="914" h="24" align="4" font_size="220" background_color="#000000FF"/>

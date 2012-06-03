@@ -33,7 +33,8 @@
 		[-][D]D.d[d]... [-][D][D]D.d[d]...
 		[-]0xX [-]0xX -->
 
-	<navit center="0x10b6f5 0x6c435d" zoom="64" tracking="1" orientation="-1" recent_dest="10" autozoom_active="1" pitch="20">
+	<navit center="0x10b6f5 0x6c435d" zoom="64" tracking="1" pitch="20"
+		orientation="-1" recent_dest="10" autozoom_active="1" osd_configuration="1">
 		<!-- Use one of gtk_drawing_area, qt_qpainter or sdl. -->
 		<graphics type="sdl"/>
 		<!-- for a debug log -->
