@@ -1,4 +1,4 @@
-<!-- chr:
+                <!-- chr:
                      flags used for a truck: (first flag number is 0)
                                  8: SIZE_OR_WEIGHT_LIMIT
                                 21: TRANSPORT_TRUCK
@@ -88,3 +88,4 @@
         <roadprofile item_types="roundabout" speed="5" route_weight="5"/>
         <roadprofile item_types="ferry" speed="40" route_weight="40"/>
 </vehicleprofile>
+

@@ -11,28 +11,28 @@
 Destinations</text></img>
 			<a href='#Settings'><img src='gui_arrow_right'><text>Settings</text></img></a>
 			<img src='gui_quit' onclick='quit()'><text>Quit</text></img>
-			<img cond='navit.route.route_status!=route_status_no_destination' src='gui_stop' onclick='abort_navigation(); menu("#Main Menu",1)'><text>Stop
+			<img cond='navit.route.route_status!=route_status_no_destination' src='gui_stop' onclick='abort_navigation(); refresh()'><text>Stop
 Navigation</text></img>
 		</a>
 		<a name='Settings'><text>Settings</text>
-			<img cond='navit.orientation<0' src='gui_stop' onclick='navit.orientation=0; menu("#Settings",1)'><text>Northing</text></img>
-			<img cond='navit.orientation>=0' src='gui_active' onclick='navit.orientation=-1; menu("#Settings",1)'><text>Northing</text></img>
+			<img cond='navit.orientation<0' src='gui_stop' onclick='navit.orientation=0; refresh()'><text>Northing</text></img>
+			<img cond='navit.orientation>=0' src='gui_active' onclick='navit.orientation=-1; refresh()'><text>Northing</text></img>
 
-			<img cond='navit.autozoom_active!=0' src='gui_active' onclick='navit.autozoom_active=0; menu("#Settings",1)'><text>Autozoom</text></img>
-			<img cond='navit.autozoom_active==0' src='gui_stop' onclick='navit.autozoom_active=1; menu("#Settings",1)'><text>Autozoom</text></img>
+			<img cond='navit.autozoom_active!=0' src='gui_active' onclick='navit.autozoom_active=0; refresh()'><text>Autozoom</text></img>
+			<img cond='navit.autozoom_active==0' src='gui_stop' onclick='navit.autozoom_active=1; refresh()'><text>Autozoom</text></img>
 
-			<img cond='navit.tracking==1' src='gui_active' onclick='navit.tracking=0; menu("#Settings",1)'><text>Lock on
+			<img cond='navit.tracking==1' src='gui_active' onclick='navit.tracking=0; refresh()'><text>Lock on
 Road</text></img>
-			<img cond='navit.tracking==0' src='gui_stop' onclick='navit.tracking=1; menu("#Settings",1)'><text>Lock on
+			<img cond='navit.tracking==0' src='gui_stop' onclick='navit.tracking=1; refresh()'><text>Lock on
 Road</text></img>
 
-			<img cond='navit.follow_cursor==1' src='gui_active' onclick='navit.follow_cursor=0; menu("#Settings",1)'><text>Map follows
+			<img cond='navit.follow_cursor==1' src='gui_active' onclick='navit.follow_cursor=0; refresh()'><text>Map follows
 Vehicle</text></img>
-			<img cond='navit.follow_cursor==0' src='gui_stop' onclick='navit.follow_cursor=1; menu("#Settings",1)'><text>Map follows
+			<img cond='navit.follow_cursor==0' src='gui_stop' onclick='navit.follow_cursor=1; refresh()'><text>Map follows
 Vehicle</text></img>
 
-			<img cond='navit.pitch==0' src='gui_stop' onclick='navit.pitch=pitch; menu("#Settings",1)'><text>3D</text></img>
-			<img cond='navit.pitch!=0' src='gui_active' onclick='navit.pitch=0; menu("#Settings",1)'><text>3D</text></img>
+			<img cond='navit.pitch==0' src='gui_stop' onclick='navit.pitch=pitch; refresh()'><text>3D</text></img>
+			<img cond='navit.pitch!=0' src='gui_active' onclick='navit.pitch=0; refresh()'><text>3D</text></img>
 
 			<a href='#Advanced'><img src='gui_arrow_right'><text>Advanced</text></img></a>
 		</a>

@@ -19,7 +19,7 @@
 <osd enabled="yes" type="image" x="0" y="-150" w="114" h="102" src="$NAVIT_SHAREDIR/xpm/PreNav/bottom_bg.png" /> 
 <osd enabled="yes" type="image" x="114" y="-108" w="20" h="20" src="$NAVIT_SHAREDIR/xpm/PreNav/ecke_ul.png" /> 
 <osd enabled="yes" type="image" x="-20" y="-108" w="20" h="20" src="$NAVIT_SHAREDIR/xpm/PreNav/ecke_ur.png" /> 
-<osd enabled="yes" type="image" x="-85" y="40" w="85" h="273" src="$NAVIT_SHAREDIR/xpm/PreNav/menu_right_mantaray.png" /> 
+<osd enabled="yes" type="image" x="-85" y="40" w="85" h="343" src="$NAVIT_SHAREDIR/xpm/PreNav/menu_right_mantaray.png" /> 
 
 <!-- top-right -->
 <osd enabled="yes" type="gps_status" x="-50" y="00" w="50" h="40" background_color="#000000ff"/> 

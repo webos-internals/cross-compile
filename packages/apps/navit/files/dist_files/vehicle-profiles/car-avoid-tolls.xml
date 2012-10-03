@@ -62,3 +62,4 @@
 	<roadprofile item_types="roundabout" speed="10" route_weight="10"/>
 	<roadprofile item_types="ferry" speed="40" route_weight="40"/>
 </vehicleprofile>
+

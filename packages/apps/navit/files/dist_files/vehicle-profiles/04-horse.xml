@@ -1,4 +1,4 @@
-<vehicleprofile name="horse" flags="0x20000000" flags_forward_mask="0x20000000" flags_reverse_mask="0x20000000" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="10">
+<vehicleprofile name="horse" route_depth="18:25%,18:40000" flags="0x20000000" flags_forward_mask="0x20000000" flags_reverse_mask="0x20000000" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="10">
 	<roadprofile item_types="bridleway" speed="10" route_weight="10">
 		<announcement level="0" distance_metric="25"/>
 		<announcement level="1" distance_metric="100"/>
@@ -52,3 +52,4 @@
 	<roadprofile item_types="roundabout" speed="5" route_weight="2"/>
 	<roadprofile item_types="ferry" speed="40" route_weight="40"/>
 </vehicleprofile>
+

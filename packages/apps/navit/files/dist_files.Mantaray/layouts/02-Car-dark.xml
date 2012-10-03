@@ -19,6 +19,10 @@
       			<polygon color="#041a06"/>
       			<text text_size="7"/>
     		</itemgra>
+    		<itemgra item_types="poly_meadow" order="0-">
+			<polygon color="#c7f1a3"/>
+			<polyline color="#79c691"/>
+		</itemgra>
     		<itemgra item_types="poly_town" order="0-">
       			<polygon color="#191711"/>
     		</itemgra>
@@ -269,7 +273,7 @@
 			<polyline color="#3d3d3d" width="7" dash="7,15"/>
 			<polyline color="#800000" width="5" dash="7,15"/>
 		</itemgra>
-		<itemgra item_types="track_unpaved" order="15-">
+		<itemgra item_types="track_unpaved,track_ground,path,hiking,hiking_mountain,hiking_mountain_demanding,hiking_alpine,hiking_alpine_demanding,hiking_alpine_difficult" order="16-">
 			<polyline color="#000000" width="1"/>
 		</itemgra>
 		<itemgra item_types="bridleway" order="15-">
@@ -689,13 +693,13 @@
 			<polyline color="#FFFF00" width="13"/>
 		</itemgra>
 		<itemgra item_types="street_route" order="16">
-			<polyline color="#FFFF00" width="198"/>
+			<polyline color="#FFFF00" width="15"/>
 		</itemgra>
 		<itemgra item_types="street_route" order="17">
-			<polyline color="#FFFF00" width="402"/>
+			<polyline color="#FFFF00" width="16"/>
 		</itemgra>
 		<itemgra item_types="street_route" order="18">
-			<polyline color="#FFFF00" width="795"/>
+			<polyline color="#FFFF00" width="18"/>
 		</itemgra>
 		<!-- ROUTING -->
 

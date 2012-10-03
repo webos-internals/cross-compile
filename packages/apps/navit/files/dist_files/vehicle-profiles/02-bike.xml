@@ -1,4 +1,4 @@
-<vehicleprofile name="bike" flags="0x40000000" flags_forward_mask="0x40000000" flags_reverse_mask="0x40000000" maxspeed_handling="1" route_mode="0" static_speed="5" static_distance="25">
+<vehicleprofile name="bike" route_depth="18:25%,18:40000" flags="0x40000000" flags_forward_mask="0x40000000" flags_reverse_mask="0x40000000" maxspeed_handling="1" route_mode="0" static_speed="5" static_distance="25">
 	<roadprofile item_types="steps" speed="2" route_weight="5">
 		<announcement level="0" distance_metric="25"/>
 		<announcement level="1" distance_metric="100"/>
@@ -58,3 +58,4 @@
 	<roadprofile item_types="roundabout" speed="20" route_weight="10"/>
 	<roadprofile item_types="ferry" speed="40" route_weight="40"/>
 </vehicleprofile>
+
