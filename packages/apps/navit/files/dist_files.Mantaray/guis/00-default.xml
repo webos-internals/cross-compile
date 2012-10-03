@@ -11,7 +11,7 @@
 Destinations</text></img>
 			<a href='#Settings'><img src='gui_arrow_right'><text>Settings</text></img></a>
 			<img src='gui_quit' onclick='quit()'><text>Quit</text></img>
-			<img cond='navit.route.route_status!=route_status_no_destination' src='gui_stop' onclick='abort_navigation(); menu("#Main Menu',1)'><text>Stop
+			<img cond='navit.route.route_status!=route_status_no_destination' src='gui_stop' onclick='abort_navigation(); menu("#Main Menu",1)'><text>Stop
 Navigation</text></img>
 		</a>
 		<a name='Settings'><text>Settings</text>
